@@ -1,0 +1,6 @@
+"protectpresident"
+{
+	"base"		"sandbox"
+	"title"		"Protect the President"
+	"author"	"Blt950"
+}
