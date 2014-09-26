@@ -21,9 +21,9 @@ function AFKTimer()
 				elseif(#player.GetAll() >= 28 and ply.AFK < CurTime() - 900)then
 					PrintChatAll(COLOR_CONNECT, "System has kicked '"..ply:Name().."' (AFK more than 15 minutes).")
 					ply:Kick("AFK more than 15 minutes");
-					writeLog("System has kicked '"..ply:Name().."' (AFK more than 15 minutes).")
+					writeLog("System has kicked '"..ply:Nick().."' (AFK more than 15 minutes).")
 				elseif(#player.GetAll() <= 27 and ply.AFK < CurTime() - 1800)then
-					PrintChatAll(COLOR_CONNECT, "System has kicked '"..ply:Name().."' (AFK more than 30 minutes).")
+					PrintChatAll(COLOR_CONNECT, "System has kicked '"..ply:Nick().."' (AFK more than 30 minutes).")
 					ply:Kick("AFK more than 30 minutes");
 					writeLog("System has kicked '"..ply:Name().."' (AFK more than 30 minutes).")
 				end
