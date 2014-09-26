@@ -28,10 +28,10 @@ UPGRADE_ASSAULTCLASS = AddUpgrade("assaultclass", "Assault Class", "Unlock the A
 UPGRADE_HEAVYCLASS = AddUpgrade("heavyclass", "Heavy Class", "[Premium Only] Unlock the Heavy class as Terrorist.", "models/player/phoenix.mdl", "Terrorist", {{price = 200, value = 1, donator = true}})
 UPGRADE_BOSSCLASS = AddUpgrade("bossclass", "Boss Class", "[Premium Only] Unlock the Boss class as Terrorist.", "models/player/phoenix.mdl", "Terrorist", {{price = 250, value = 1, donator = true}})
 
-UPGRADE_SSMEMBERWEP = AddUpgrade("ss_agentwep", "Agent Weapon Upgrade", "Upgrade your MP40 to FAMAS for Secret Service Agent class.", "models/weapons/w_tct_famas.mdl", "Secret Service", {{price = 100, value = 1, donator = false}})
-UPGRADE_SSSHIELDWEP = AddUpgrade("ss_shieldwep", "Shield Weapon Upgrade", "Upgrade your MP5 to M16 for Secret Service Shield class.", "models/weapons/w_dmg_m16ag.mdl", "Secret Service",{{price = 150, value = 1, donator = false}})
+UPGRADE_SSMEMBERWEP = AddUpgrade("ss_agentwep", "Agent Weapon Upgrade", "Upgrade your MP40 to P90 for Secret Service Agent class.", "models/weapons/w_fn_p90.mdl", "Secret Service", {{price = 100, value = 1, donator = false}})
+UPGRADE_SSSHIELDWEP = AddUpgrade("ss_shieldwep", "Shield Weapon Upgrade", "Upgrade your MP5 to Honey Badger for Secret Service Shield class.", "models/weapons/w_aac_honeybadger.mdl", "Secret Service",{{price = 150, value = 1, donator = false}})
 UPGRADE_SSGHOSTWEP = AddUpgrade("ss_ghostwep", "Ghost Weapon Addition", "[Premium Only] Add a Dragunov SVU silenced sniper for Secret Service Ghost class.", "models/weapons/w_snip_scout.mdl", "Secret Service",{{price = 250, value = 1, donator = true}})
-UPGRADE_TMEMBERWEP = AddUpgrade("t_memberwep", "Member Wep Upgrade", "Upgrade your MAC 10 to FN FAL for Terrorist Member class.", "models/weapons/w_fn_fal.mdl", "Terrorist", {{price = 100, value = 1, donator = false}})
+UPGRADE_TMEMBERWEP = AddUpgrade("t_memberwep", "Member Wep Upgrade", "Upgrade your MAC 10 to UMP for Terrorist Member class.", "models/weapons/w_hk_ump45", "Terrorist", {{price = 100, value = 1, donator = false}})
 UPGRADE_TPROXMINE = AddUpgrade("t_proxmine", "Prox Mine", "Add an Proximity mine to your loadout as Terrorist Technician.", "models/weapons/w_px.mdl", "Terrorist", {{price = 100, value = 1, donator = false}})
 UPGRADE_TC4 = AddUpgrade("t_c4", "C4 Bomb", "Add an C4 bomb to your loadout as Terrorist Technician.", "models/weapons/w_sb_planted.mdl", "Terrorist", {{price = 150, value = 1, donator = false}})
 UPGRADE_SSPROXMINE = AddUpgrade("ss_proxmine", "Prox Mine", "Add an Proximity mine to your loadout as Secret Service Technician.", "models/weapons/w_px.mdl", "Secret Service", {{price = 100, value = 1, donator = false}})
