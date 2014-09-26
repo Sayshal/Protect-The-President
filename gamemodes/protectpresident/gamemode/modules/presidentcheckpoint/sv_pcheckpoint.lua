@@ -38,13 +38,13 @@ function CheckCheckpoint()
 			// Give SS reward
 			for x, y in pairs(ents.FindInSphere( PresidentCheckpoints[index], 500)) do
 				if y:IsPlayer() and y:IsValid() and y:Team() == TEAM_SECRETSERVICE then
-					y:Notify("You have been awarded 2 points for safetly bringing the President to checkpoint.")
+					y:Notify("You have been awarded 2 points for safetly bringing the President to a checkpoint.")
 					y:GivePoints(2)
 				end
 			end
 
 			ply:Notify("Congratulations! You've reached the checkpoint.")
-			ply:PrintChat(Color(255,100,0), "[Checkpoint] ", Color(255,255,255), "Congratulations! You've reached the checkpoint. You've been awarded with 5 points. Hurry up for next!")
+			ply:PrintChat(Color(255,100,0), "[Checkpoint] ", Color(255,255,255), "Congratulations! You've reached the checkpoint. You've been awarded with 5 points. Get a move on to the next one!")
 			ply:GivePoints(5)
 			SelectCheckpoint()
 			
@@ -52,7 +52,7 @@ function CheckCheckpoint()
 
 		if CurTime() >= duetime-1 and CurrentPresident() != false then
 			CurrentPresident():Notify("You've failed to reach a checkpoint!", 1)
-			CurrentPresident():PrintChat(Color(255,100,0), "[Checkpoint] ", Color(255,255,255), "Failure! You did not reach checkpoint in time. You have lost 3 points! Hurry up to the new checkpoint!")
+			CurrentPresident():PrintChat(Color(255,100,0), "[Checkpoint] ", Color(255,255,255), "Failure! You did not reach the checkpoint in time. You have lost 3 points! Hurry up to the new checkpoint!")
 			CurrentPresident():GivePoints(-3)
 			SelectCheckpoint()
 		end

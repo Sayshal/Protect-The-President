@@ -10,7 +10,7 @@
 //	==============================
 
 GM.Name = "Protect the President"
-GM.Author = "By Blt950"
+GM.Author = "By Blt950, Maintained by Sayshal"
 
 include("shared.lua")
 include("core/sv_mysql.lua")
@@ -28,7 +28,7 @@ DeriveGamemode("sandbox")
 
 // This are the addons I used. Uncomment if you want to use any of them.
 
-/*
+
 resource.AddWorkshop( "163806212" ) -- Adv. Dupe
 resource.AddWorkshop( "160250458" ) -- Wiremod
 resource.AddWorkshop( "144982052" ) -- M9K Specialities
@@ -45,7 +45,7 @@ resource.AddWorkshop( "104483020" ) -- SCars Slim
 resource.AddWorkshop( "104487316" ) -- SCars Basic
 resource.AddWorkshop( "233519629" ) -- Agent Model
 resource.AddWorkshop( "175387367" ) -- Splinter Model
-*/
+
 
 //	==============================
 //			LOAD MODULES

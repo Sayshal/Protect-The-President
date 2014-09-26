@@ -74,7 +74,7 @@ function PANEL:Init()
 	self.Logog:SetText( "p" )
 
 	self.SuiSc = vgui.Create( "DLabel", self )
-	self.SuiSc:SetText( "PhunBox.eu" )
+	self.SuiSc:SetText( "Google.ca" ) -- This needs to be a global config option. webname = "blah.com"?
 	
 	self.Description = vgui.Create( "DLabel", self )
 	self.Description:SetText( GAMEMODE.Name .. " - created by " .. GAMEMODE.Author )

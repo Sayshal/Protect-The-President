@@ -10,7 +10,7 @@
 //	==============================
 
 GM.Name 	= "Protect the President"
-GM.Author 	= "Blt950"
+GM.Author 	= "Blt950, Maintained by Sayshal"
 DeriveGamemode("sandbox")
 
 
@@ -72,9 +72,9 @@ TEAM_CITIZEN = AddTeam("Citizen", Color(20, 150, 20, 255), {"models/player/Group
 
 TEAM_PRESIDENT = AddTeam("President", Color(255, 80, 80, 255), "models/player/breen.mdl", [[The President is constantly under danger,
 	terrorists are trying to kill him each day. How long can you survive?]])
-TEAM_SECRETSERVICE = AddTeam("Secret Service", Color(50, 89, 255, 255), "models/player/smith.mdl", [[The Secret Service ensure the Presidents safetly,
-	their job is to protect the president, and also eliminate all potential threats.]], 1)
-TEAM_TERRORIST = AddTeam("Terrorist", Color(255, 140, 0, 255) , "models/player/phoenix.mdl", [[The Terrorists are trying to kill the president, what ever it takes. 
+TEAM_SECRETSERVICE = AddTeam("Secret Service", Color(50, 89, 255, 255), "models/player/smith.mdl", [[The Secret Service ensure the Presidents safety,
+	their job is to protect the President, and eliminate all potential threats.]], 1)
+TEAM_TERRORIST = AddTeam("Terrorist", Color(255, 140, 0, 255) , "models/player/phoenix.mdl", [[The Terrorists are trying to kill the President, what ever it takes. 
 	Their mission is to eliminate the president, and infiltrate the President Office 
 	by getting presidency themselves when their mission is complete.]], 6)
 

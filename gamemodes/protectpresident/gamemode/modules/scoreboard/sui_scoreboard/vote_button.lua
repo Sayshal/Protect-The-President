@@ -105,9 +105,10 @@ function PANEL:Paint(w,h)
 	elseif( self.VoteName == "god") then
 		surface.SetDrawColor( 255, 255, 255, alpha )
 		surface.DrawTexturedRect( self:GetWide()/2 - 13, self:GetWide()/2 - 8, 26, 26 ) 
-	elseif( self.VoteName == "gay") then
-		surface.SetDrawColor( 255, 0, 215, alpha )
-		surface.DrawTexturedRect( self:GetWide()/2 - 13, self:GetWide()/2 - 8, 26, 26 ) 
+--	elseif( self.VoteName == "gay") then
+--		surface.SetDrawColor( 255, 0, 215, alpha )
+--		surface.DrawTexturedRect( self:GetWide()/2 - 13, self:GetWide()/2 - 8, 26, 26 ) 
+-- Not a big fan of this, going to test proper removal.
 	else
 		surface.SetDrawColor( 255, 255, 255, alpha )
 		surface.DrawTexturedRect( self:GetWide()/2 - 8, self:GetWide()/2 - 8, 16, 16 ) 

@@ -56,7 +56,7 @@ function GM:PostRenderVGUI()
 			surface.SetMaterial(logo)
 			surface.DrawTexturedRect(x, y, w, h)
 
-			draw.SimpleText("Gamemode by Blt950 for PhunBox.eu", "ptp_HUDFont", scrW * 0.5, scrH * 0.5, Color(2, 81, 124, alpha), 1, 1)
+			draw.SimpleText("Gamemode by Blt950\n Maintained by Sayshal", "ptp_HUDFont", scrW * 0.5, scrH * 0.5, Color(2, 81, 124, alpha), 1, 1)
 
 			if not mysql_connected then
 				draw.SimpleText("MySQL Connection Failure, contact administration.", "ptp_HUDFontFat", scrW * 0.5, scrH * 0.8, Color(255, 0, 0, alpha), 1, 1)

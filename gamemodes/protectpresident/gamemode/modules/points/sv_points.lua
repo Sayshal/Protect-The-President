@@ -59,7 +59,7 @@ function PointsTimer()
 
 			// Playing for 30 minutes
 			if CurTime() >= v:GetSharedVar("points_30min") then
-				v:Notify("You've earned 10 points by playing for 30 minutes.", 0)
+				v:Notify("You've earned 10 points for playing for 30 minutes.", 0)
 				v:GivePoints(10)
 				v:SetSharedVar("points_30min", CurTime() + 1800)
 			end
@@ -68,7 +68,7 @@ function PointsTimer()
 			if v:Team() == TEAM_PRESIDENT then
 				v:SetSharedVar("points_president15min", v:GetSharedVar("points_president15min") + 1)
 				if v:GetSharedVar("points_president15min") >= 900 then
-					v:Notify("You've earned 5 points by surviving 15 minutes as President.", 0)
+					v:Notify("You've earned 5 points for surviving 15 minutes as President.", 0)
 					v:GivePoints(5)
 					v:SetSharedVar("points_president15min", 0)
 				end
@@ -98,20 +98,20 @@ function PlayerDeathPoints(victim, weapon, killer)
 	if (killer:Team() == TEAM_PRESIDENT or killer:Team() == TEAM_SECRETSERVICE and victim:Team() == TEAM_TERRORIST) 
 	or (killer:Team() == TEAM_TERRORIST and victim:Team() == TEAM_SECRETSERVICE) then
 		if killer:IsPremium() then
-			killer:Notify("You've earned 5 points for killing a enemy.", 0)
+			killer:Notify("You've earned 5 points for killing an enemy.", 0)
 			killer:GivePoints(5)
 		else
-			killer:Notify("You've earned 3 points for killing a enemy.", 0)
+			killer:Notify("You've earned 3 points for killing an enemy.", 0)
 			killer:GivePoints(3)
 		end
 
-		victim:Notify("You've lost 1 point by getting killed!", 1)
+		victim:Notify("You've lost 1 point for getting killed!", 1)
 		victim:GivePoints(-1)
 	end
 
 	// Killing the president
 	if killer:Team() == TEAM_TERRORIST and victim:Team() == TEAM_PRESIDENT then
-		killer:Notify("You've earned 20 points for killing the president!", 0)
+		killer:Notify("You've earned 20 points for killing the President!", 0)
 		killer:GivePoints(20)
 
 		victim:Notify("You've lost 20 points for getting killed as President!", 1)
@@ -119,10 +119,10 @@ function PlayerDeathPoints(victim, weapon, killer)
 
 		for _, v in pairs(player.GetAll()) do
 			if v:Team() == TEAM_SECRETSERVICE then
-				v:Notify("You've lost the President on your watch. You've lost 5 points!", 1)
+				v:Notify("The President was killed on your watch. You've lost 5 points!", 1)
 				v:GivePoints(-5)
 			elseif v:Team() == TEAM_TERRORIST then
-				v:Notify("The terrorists successfully killed the President! You've been awarded with 5 points.")
+				v:Notify("The Terrorists successfully killed the President! You've been awarded with 5 points.")
 				v:GivePoints(5)
 			end
 		end

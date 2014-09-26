@@ -80,11 +80,11 @@ function proccessDonators(data)
 				ply:SetPlayerData("donationexpire", d_expire)
 
 				if givenpoints > 0 then
-					ply:PrintChat(Color(255,100,100), "Thank you for donating to Phunbox Roleplay. You've been applied your points and Premium status.")
+					ply:PrintChat(Color(255,100,100), "Thank you for donating to SERVERNAMEHERE. You've been applied your points and Premium status.") -- Global config value please.
 				else
-					ply:PrintChat(Color(255,100,100), "Thank you for donating to Phunbox Roleplay. You've been applied your Premium status.")
+					ply:PrintChat(Color(255,100,100), "Thank you for donating to SERVERNAMEHERE. You've been applied your Premium status.") -- Global config value please.
 				end
-				timer.Simple(10, function() PrintChatAll(Color(200,100,100), "PhunBox would like to thank "..ply:Name().. " for donating to the server <3") end)
+				timer.Simple(10, function() PrintChatAll(Color(200,100,100), "SERVERNAMEHERE would like to thank "..ply:Name().. " for donating to the server <3") end) -- Global config value please.
 
 				writeLog(ply:Nick() .. " ["..ply:SteamID().."] has been applied Premium status with "..givenpoints.."p. | Prev balance: "..prevbalance.."p | New balance: "..ply:GetPlayerData("points").."p", Color(255, 190, 0))
 
@@ -101,7 +101,7 @@ function proccessDonators(data)
 				end
 
 				ply:PrintChat(Color(255,100,100), "Your donation has been renewed. You've been applied your new points and Premium status.")
-				timer.Simple(10, function() PrintChatAll(Color(200,100,100), "PhunBox would like to thank "..ply:Name().. " for donating to the server <3") end)
+				timer.Simple(10, function() PrintChatAll(Color(200,100,100), "SERVERNAMEHERE would like to thank "..ply:Name().. " for donating to the server!") end) -- Global config value please.
 				writeLog(ply:Nick() .. " ["..ply:SteamID().."] has been renewed Premium status with "..givenpoints.."p. | Prev balance: "..prevbalance.."p | New balance: "..ply:GetPlayerData("points").."p", Color(255, 190, 0))
 
 				ply:SetPlayerData("donationexpire", d_expire)

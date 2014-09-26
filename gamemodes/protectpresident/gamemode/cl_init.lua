@@ -11,7 +11,7 @@
 
 
 GM.Name = "Protect the President"
-GM.Author = "By Blt950"
+GM.Author = "By Blt950, Maintained by Sayshal"
 
 include("shared.lua")
 include("core/cl_networking.lua")

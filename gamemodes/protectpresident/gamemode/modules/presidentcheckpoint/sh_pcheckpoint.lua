@@ -32,7 +32,7 @@ PresidentCheckpoints = {
 	Vector(-5874.771973, 12915.968750, 234.031250), // Lake house by road
 	Vector(-13706.975586, 12134.985352, 234.031250), // Lake house by lake
 	Vector(-10487.957031, 9364.819336, 72.031250) // Hospital
-}
+} -- All these Vectors are hardcoded to evocity_v33x, hopefully I can move these to a checkpoints.lua and teach people how to add their own? We'll see.
 
 function CurrentPresident()
 	local found = false

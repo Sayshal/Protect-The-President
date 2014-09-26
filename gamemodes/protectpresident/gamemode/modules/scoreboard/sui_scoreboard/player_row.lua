@@ -8,6 +8,7 @@
 utimecheck = false
 if file.Exists("autorun/cl_utime.lua", "LUA") then 
 	utimecheck = true
+	print(">>> PTP --> UTime Support added!")
 end
 
 
@@ -15,6 +16,7 @@ end
 ulibcheck = false
 if file.Exists("ulib/cl_init.lua", "LUA") then 
 	ulibcheck = true
+	print(">>> PTP --> ULib Support added!")
 end
 
 local texGradient = surface.GetTextureID( "gui/center_gradient" )
@@ -148,7 +150,7 @@ function PANEL:UpdatePlayerData()
 	count = self:CheckRating( 'gold_star', count )
 	count = self:CheckRating( 'builder', count )
 	count = self:CheckRating( 'lol', count )
-	count = self:CheckRating( 'gay', count )
+	--count = self:CheckRating( 'gay', count ) -- No thanks.
 	count = self:CheckRating( 'curvey', count )
 	count = self:CheckRating( 'god', count )
 	count = self:CheckRating( 'stunter', count )
@@ -220,7 +222,7 @@ end
    Name: DoClick
 ---------------------------------------------------------*/
 function PANEL:DoClick()
-	/*if self.Open then
+	if self.Open then
 		surface.PlaySound( "ui/buttonclickrelease.wav" )
 	else
 		surface.PlaySound( "ui/buttonclick.wav" )

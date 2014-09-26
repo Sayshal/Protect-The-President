@@ -5,8 +5,8 @@
 
 ]]--
 
-local maxwarnings = 3
-local banreason = "Maximum warning level reached."
+local maxwarnings = 3 -- This should be in global config.
+local banreason = "Maximum warning level reached." -- So should this.
 local meta = FindMetaTable("Player")
 
 //	==============================
@@ -21,7 +21,7 @@ function meta:GiveWarning(reason)
 	self:Notify("You've recieved a warning for " .. reason, 1)
 	self:PrintChat(Color(255,0,0), "You've recieved a warning for "..reason)
 	self:PrintChat(Color(255,0,0), "Warning points: "..self:GetPlayerData("warningpoints").."/"..maxwarnings)
-	self:PrintChat(Color(255,255,0), "Once you hit the last warning point, you'll be automatically banned. The ban length will be decided by number of bans earlier.")
+	self:PrintChat(Color(255,255,0), "Once you hit the last warning point, you'll be automatically banned. The ban length will vary based on previous bans and admin discretion.")
 	writeLog(self:Nick() .. " ["..self:SteamID().."] has been warned for "..reason..". Warning points: "..self:GetPlayerData("warningpoints").."/"..maxwarnings, Color(255, 190, 0))
 	CheckMax(self)
 end
@@ -36,8 +36,8 @@ function CheckMax(ply)
 		ply:SetPlayerData("previouswarningbans", previousbans + 1)
 		ply:SetPlayerData("warningpoints", 0)
 
-		if previousbans == 0 or previousbans == 1 then
-			RunConsoleCommand("ulx", "ban", ply:Name(), 60, "1h ban: "..banreason)
+		if previousbans == 0 or previousbans == 1 then -- Don't like that this assumes ULX without checking for it.
+			RunConsoleCommand("ulx", "ban", ply:Name(), 60, "1h ban: "..banreason) 
 		elseif previousbans == 2 then
 			RunConsoleCommand("ulx", "ban", ply:Name(), 1440, "1d ban: "..banreason)
 		elseif previousbans == 3 then

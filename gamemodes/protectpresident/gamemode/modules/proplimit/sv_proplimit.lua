@@ -12,7 +12,7 @@ function Proplimit(ply, models)
 	end
 
 	if ply:GetCount("props") >= ply.proplimit and !ply:IsSuperAdmin() then
-		ply:Notify("Maximum props reached. Purchase higher proplimit in shop!", 1)
+		ply:Notify("Maximum props reached. Purchase a higher proplimit in the shop!", 1)
 		return false
 	end
 end

@@ -18,7 +18,7 @@ local mysql_password = 'rootpass' -- Your MySQL password.
 local mysql_database = 'ptp' -- Your MySQL database.
 local mysql_port = 3306 -- Your MySQL port. Most likely is 3306.
 local mysql_savetime = 30
-
+-- SQL Data should be moved to it's on configuration please.
 //  ==============================
 //          CONNECT
 //  ==============================
@@ -35,7 +35,7 @@ end
 
 function db:onConnected()
     CreateConVar( "mysql_connected", "true", FCVAR_REPLICATED, "If the MySQl is connected" )
-    MsgN('>>> PTP --> MySQL: =CONNECTED=')
+    MsgN('>>> PTP --> MySQL: CONNECTED')
     mysql_connected = true
 
     ProccessData()
@@ -43,7 +43,7 @@ function db:onConnected()
 end
 
 function db:onConnectionFailed(err)
-    MsgN('>>> PTP --> MySQL: =CONNECTION FAILED= ('..err..')')
+    MsgN('>>> PTP --> MySQL: CONNECTION FAILED ('..err..')')
 end
 
 db:connect()
@@ -93,11 +93,11 @@ function UpdateData(ply)
             db:connect()
             db:wait()
         if db:status() ~= mysqloo.DATABASE_CONNECTED then
-            ErrorNoHalt(">>> PTP --> MySQL: =CONNECTION FAILED= (Re-connection to database server failed)")
+            ErrorNoHalt(">>> PTP --> MySQL: CONNECTION FAILED (Re-connection to database server failed)")
             return
             end
         end
-        MsgN('>>> PTP --> MySQL: =QUERY FAILED= ' .. err .. ' (' .. sql .. ')')
+        MsgN('>>> PTP --> MySQL: QUERY FAILED ' .. err .. ' (' .. sql .. ')')
     end
      
     q:start()
@@ -143,11 +143,11 @@ function CheckData(ply, callback)
             db:connect()
             db:wait()
         if db:status() ~= mysqloo.DATABASE_CONNECTED then
-            ErrorNoHalt(">>> PTP --> MySQL: =CONNECTION FAILED= (Re-connection to database server failed)")
+            ErrorNoHalt(">>> PTP --> MySQL: CONNECTION FAILED (Re-connection to database server failed)")
             return
             end
         end
-        MsgN('>>> PTP --> MySQL: =QUERY FAILED= ' .. err .. ' (' .. sql .. ')')
+        MsgN('>>> PTP --> MySQL: QUERY FAILED ' .. err .. ' (' .. sql .. ')')
     end
      
     q:start()

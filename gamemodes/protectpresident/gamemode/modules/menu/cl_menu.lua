@@ -327,11 +327,11 @@ function drawMenu()
 		These points can be used in the point-shop to unlock new benefits and classes.
 		<br><br>
 		<b>How can I earn Reward Points?</b>
-		<br>* Kill a player of the opposite team. + 3 point.
-		<br>* You kill the president as Terrorist. + 20 points. + 5 point to team.
-		<br>* Remain alive as president for 15 minutes. + 5 points.
-		<br>* Playtime of 30 minutes on the server. + 10 points.
-		<br>* President Reaches checkpoint + 5 points. -3 on failure.
+		<br>* Kill a player of the opposite team. <b>+ 3 point.</b>
+		<br>* You kill the president as Terrorist. <b>+ 20 points. + 5 point to team.</b>
+		<br>* Remain alive as president for 15 minutes. <b>+ 5 points.</b>
+		<br>* Playtime of 30 minutes on the server. <b>+ 10 points.</b>
+		<br>* President Reaches checkpoint <b>+ 5 points. -3 on failure.</b>
 		</body>
 	]])
 	HelpText:SetPos(0,0)
@@ -343,7 +343,7 @@ function drawMenu()
 	RulesPanel:SetSize(800, 500)
 
 	RulesText = vgui.Create("HTML", RulesPanel)
-	RulesText:OpenURL("http://phunbox.eu/index.php?threads/server-rules.4/")
+	RulesText:OpenURL("SERVERURLHERE") -- Global config please.
 	RulesText:SetPos(0,0)
 	RulesText:SetSize(985,700)
 
@@ -357,11 +357,10 @@ function drawMenu()
 		<body style="background-color: white; font-family: Helvetica, sans-serif;">
 		<div style="padding-top: -100px;">
 		<h1>Premium Membership</h1>
-		<p>Would you like more points quicker and more exclusive access? Check out our Premium plans!<br><b>Donate at www.phunbox.eu/premium</b></p>
-		<img src="http://phunbox.eu/premiums.png" height="70%"/>
-		</div>
+		<p>Would you like more points quicker and more exclusive access? Check out our Premium plans!<br><b>Donate at SERVERURLHERE</b></p>
+		<img src="" height="70%"/>
 		</body>
-	]])
+	]]) -- Create an image and global config for website please!
 	PremiumText:SetPos(0,0)
 	PremiumText:SetSize(985,700)
 
@@ -373,20 +372,22 @@ function drawMenu()
 	CreditsText = vgui.Create("HTML", CreditsPanel)
 	CreditsText:SetHTML([[
 		<center>
-		<body style="background-color: white; font-family: Helvetica, sans-serif;">
-		<img src="http://phunbox.eu/PtPLogo.png" width="50%"/>
+		<body style="background-color: black; font-family: Helvetica, sans-serif;">
+		<font color="white">
+		<img src="SERVERURLHERE/PtPLogo.png" width="50%"/>
 		<div style="padding-top: -100px;">
-		<b>Blt950</b> - Creating the gamemode from scratch<br><br>
-
+		<b>Blt950</b> - Creating the gamemode from scratch.<br>
+		<b>Sayshal (a.k.a Bonana)</b> - Maintaining and updating the gamemode.<br><br>
 		<b>Hats</b> - for using his HatsChat base for the chatbox.<br>
 		<b>adamdburton</b> - using bits of his code for the shop.<br>
-		<b>Facepunch Members</b> - Problem solving<br>
+		<b>Facepunch</b> - Problem solving<br>
 		<br><br><br><br>
-		<img src="http://phunbox.eu/PhunBox%20Logo.png" width="23%"/>
+		<img src="http://SERVERURLHERE/PhunBox%20Logo.png" width="23%"/>
 		</div>
+		</font>
 		</body>
 		</center>
-	]])
+	]]) -- Create logos please!
 	CreditsText:SetPos(0,0)
 	CreditsText:SetSize(985,700)
 
@@ -399,7 +400,8 @@ function drawMenu()
 		_Protect the President_
 
 		Blt950 - Creating the gamemode from scratch
-
+		Sayshal - Maintaining and updating the gamemode.
+		
 		_ Special thanks to _
 		Hats - for using his HatsChat base for the chatbox.
 		adamdburton - using bits of his code for the shop.
