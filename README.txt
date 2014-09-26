@@ -18,3 +18,4 @@ TODO List For Protect The President:
     b) Add enable/disable modules, define 'core' (needed) modules
     c) Verify integration with ULX (usingULX =true/false, if false, defaults?)
   6. Create a central locale configuration for all pre-determined messages.
+  7. Find better chat colors, so ugly D: (maybe global config?)

@@ -2,5 +2,5 @@
 {
 	"base"		"sandbox"
 	"title"		"Protect the President"
-	"author"	"Blt950"
+	"author"	"Blt950, Maintained by Sayshal"
 }
